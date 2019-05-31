@@ -6,15 +6,15 @@ import imgSearch from "../assets/searcher.svg";
 import imgCycling from "../assets/puzzle.svg";
 import imgAdvanced from "../assets/trophy.svg";
 import imgRoute from "../assets/directions.svg";
-import escapeRegExp from 'escape-string-regexp'
-import TableUsers from "../components/tableusers";
-import ActionModal from "../components/actionmodal";
-import BreadCrumbs from "../components/breadcrumbs";
+import escapeRegExp from "escape-string-regexp";
+import TableUsers from "../components/tableusers/tableusers";
+import ActionModal from "../components/actionmodal/actionmodal";
+import BreadCrumbs from "../components/breadcrumbs/breadcrumbs";
 
 class Homepage extends Component {
   state = {
     selectedUser: null,
-    query: '',
+    query: ""
   };
   setModal = user => {
     this.setState({ selectedUser: user });
@@ -22,19 +22,19 @@ class Homepage extends Component {
   handleSearch = query => {
     this.setState({
       query: query.trim()
-    })
-  }
+    });
+  };
   removeUser = user => {
     this.setState({
-      query: ''
-    })
+      query: ""
+    });
     this.props.removeUser(user);
-  }
+  };
   render() {
     let filterUsers;
 
     if (this.state.query) {
-      const match = new RegExp(escapeRegExp(this.state.query), 'i')
+      const match = new RegExp(escapeRegExp(this.state.query), "i");
       filterUsers = this.props.users.filter(c => match.test(c.username));
     } else {
       filterUsers = this.props.users;
@@ -42,7 +42,7 @@ class Homepage extends Component {
     return (
       <div className="homepage">
         <div className="container">
-          <h1>Venturus Sport</h1>
+          <h1>Sports</h1>
         </div>
         <BreadCrumbs
           removeBread={this.props.removeBread}

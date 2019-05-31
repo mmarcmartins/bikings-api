@@ -4,8 +4,8 @@ import imgHeart from "../assets/cardiogram.svg";
 import imgFloat from "../assets/life-preserver.svg";
 import imgHappy from "../assets/happiness.svg";
 
-import CreateFormUser from "../components/createuserform";
-import BreadCrumbs from "../components/breadcrumbs";
+import CreateFormUser from "../components/createuserform/createuserform";
+import BreadCrumbs from "../components/breadcrumbs/breadcrumbs";
 
 class Createpage extends Component {
   state = {

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Users Table user should render correctly 1`] = `
+<div
+  className="table-container"
+>
+  <table
+    className="table-users"
+  >
+    <thead>
+      <tr>
+        <th>
+          Username
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          City
+        </th>
+        <th>
+          Ride in group
+        </th>
+        <th>
+          Day of the week
+        </th>
+        <th>
+          Posts
+        </th>
+        <th>
+          Albums
+        </th>
+        <th>
+          Photos
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Table Users Table user should render correctly if users is null 1`] = `
+<div
+  className="table-container"
+>
+  <table
+    className="table-users"
+  >
+    <thead>
+      <tr>
+        <th>
+          Username
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          City
+        </th>
+        <th>
+          Ride in group
+        </th>
+        <th>
+          Day of the week
+        </th>
+        <th>
+          Posts
+        </th>
+        <th>
+          Albums
+        </th>
+        <th>
+          Photos
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Table Users should render correctly in "debug" mode 1`] = `
+<div
+  className="table-container"
+>
+  <table
+    className="table-users"
+  >
+    <thead>
+      <tr>
+        <th>
+          Username
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          City
+        </th>
+        <th>
+          Ride in group
+        </th>
+        <th>
+          Day of the week
+        </th>
+        <th>
+          Posts
+        </th>
+        <th>
+          Albums
+        </th>
+        <th>
+          Photos
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;

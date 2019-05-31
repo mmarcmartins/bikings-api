@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { randomGenerator, translateDays, daysOfWeek } from "../utils/utils";
-import "../App.scss";
+import { randomGenerator, translateDays, daysOfWeek } from "../../utils/utils";
+import "../../App.scss";
 import { Link } from "react-router-dom";
 class CreateUserForm extends Component {
-
   state = {
     name: "",
     username: "",
@@ -53,11 +52,11 @@ class CreateUserForm extends Component {
 
     const checkBox = this.state.selectedCheckbox.filter(c => c);
     if (checkBox.length === 0) {
-      this.setState({ error: "Select at least one day of week" })
+      this.setState({ error: "Select at least one day of week" });
       return false;
     }
     return true;
-  }
+  };
 
   addNewUser = evt => {
     evt.preventDefault();
@@ -76,7 +75,7 @@ class CreateUserForm extends Component {
         name: name,
         username: username,
         email: email,
-        city: city || '',
+        city: city || "",
         posts: randomGenerator(20),
         albums: randomGenerator(10),
         days: translateDays(selectedCheckbox),

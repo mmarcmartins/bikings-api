@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.scss";
+import "../../App.scss";
 const ActionModal = props => {
   return (
     <div className="modal">

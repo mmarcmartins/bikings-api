@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "../App.scss";
-import imgTrash from "../assets/garbage.svg";
+import "../../App.scss";
+import imgTrash from "../../assets/garbage.svg";
 class TableUsers extends Component {
   render() {
-    const { setModal, users } = this.props;
+    const { setModal } = this.props;
+    const users = this.props.users || [];
     return (
       <div className="table-container">
         <table className="table-users">

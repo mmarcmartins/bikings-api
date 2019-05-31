@@ -4,37 +4,31 @@ const WEEKDAYS = 5;
 const WEEKENDS = 2;
 const ALLDAYS = daysOfWeek.length;
 
-const randomWeekNumber = (numbers) => {
-
-  const days = [...new Set(numbers)]
-  const randomNumber = Math.floor(Math.random() * daysOfWeek.length)
+const randomWeekNumber = numbers => {
+  const days = [...new Set(numbers)];
+  const randomNumber = Math.floor(Math.random() * daysOfWeek.length);
 
   if (days.length === 3) {
-    return days
+    return days;
   }
 
-  !days.includes(randomNumber) && days.push(randomNumber)
+  !days.includes(randomNumber) && days.push(randomNumber);
 
-  return randomWeekNumber(days)
-}
-
+  return randomWeekNumber(days);
+};
 
 const getRandomDays = () => {
   const myArr = randomWeekNumber([]);
-  return getDaysFromIndex(myArr)
+  return getDaysFromIndex(myArr);
 };
 
-const getRandomRide = () => {
-  return rideGroup[Math.floor(Math.random() * rideGroup.length)];
-};
+const getRandomRide = () =>
+  rideGroup[Math.floor(Math.random() * rideGroup.length)];
 
-const getDaysFromIndex = arrIndex => {
-  return checkSelected(arrIndex.map(i => daysOfWeek[i]));
-};
+const getDaysFromIndex = arrIndex =>
+  arrIndex !== undefined ? checkSelected(arrIndex.map(i => daysOfWeek[i])) : 0;
 
-const randomGenerator = max => {
-  return Math.floor(Math.random() * max);
-};
+const randomGenerator = max => Math.floor(Math.random() * max);
 
 const translateDays = days => {
   const weekDays = days
@@ -44,7 +38,6 @@ const translateDays = days => {
 };
 
 const checkSelected = allDays => {
-
   if (allDays.length === ALLDAYS) {
     return "Every day";
   } else {
@@ -56,8 +49,8 @@ const checkSelected = allDays => {
     return days.length === WEEKENDS && allDays.length === WEEKENDS
       ? ["Weekends"]
       : allDays.length === WEEKDAYS && days.length === 0
-        ? ["Week Days"]
-        : allDays;
+      ? ["Week Days"]
+      : allDays;
   }
 };
 
@@ -67,5 +60,8 @@ export {
   getRandomDays,
   getRandomRide,
   randomGenerator,
-  translateDays
+  translateDays,
+  randomWeekNumber,
+  checkSelected,
+  getDaysFromIndex
 };
